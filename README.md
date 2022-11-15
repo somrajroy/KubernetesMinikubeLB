@@ -1,5 +1,5 @@
 # KubernetesMinikubeLB
-A load balancer application can be developed in minikube and with some tricks. <br/><br/>
+A load balancer application can be developed & tested in minikube and with some tricks & no extra costs. <br/><br/>
 * Clone the repository and navigate to lab-04 in Powershell/CLI <br/>
 * Command to check clusters in minikube <br/>
   $ minikube profile list <br/>
