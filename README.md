@@ -10,10 +10,6 @@ A load balancer application can be developed & tested in minikube and with some 
   $ minikube profile list <br/>
 * Switch to minikube context <br/>
   $ kubectl config use-context minikube <br/>
-* Enable NGINX Ingress controller <br/>
-  $ minikube addons enable ingress <br/>
-* Verify that the NGINX Ingress controller is running <br/>
-  $ kubectl get pods -n ingress-nginx <br/>
 * Create the Deployment resources in k8s-deployments folder <br/>
   $ kubectl apply -f ./k8s-deployments/ <br/>
 * Please list the existing Deployments <br/>
