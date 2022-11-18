@@ -22,7 +22,7 @@ A load balancer application can be developed & tested in minikube and with some 
 * Check the pods now and the worker pod will be running with restarts. If it is not running the create then delete the deployment and create the worker deployment once again. The YAML file of worker deployment is in folder "k8s-deployments"  <br/>
   $ kubectl get pods <br/>
   ![image](https://user-images.githubusercontent.com/92582005/201911548-9b9ebe69-daf0-41f8-b016-1d8123d90464.png) <br/>
-* Now the tricky part. Each LoadBalaner service creates a NodePort service. We can find out by the below command and then view the service in browser using the NodePort service <br/>
+* Now the tricky part. Each LoadBalaner service creates a NodePort service. We can find out by the below command. If K8s is running in a cluster which does not support LoadBalancer type service, The Loadbalancer won't be provisioned there and it will continue to treat itself like a NodePort service. <br/>
   $ minikube service <service-name>
 * Run the vote service and it will open in new window and would display the NodePort URL. Give your vote <br/>
   $ minikube service vote <br/>
