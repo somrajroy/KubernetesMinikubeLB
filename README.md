@@ -1,4 +1,4 @@
-# KubernetesMinikubeLB
+## Kubernetes-Minikube-Load Balancer<br/>
 A load balancer application can be developed & tested in minikube and with some tricks & no extra costs. <br/><br/>
 
 ## Steps to be followed <br/>
@@ -25,6 +25,7 @@ A load balancer application can be developed & tested in minikube and with some 
 * Now the tricky part. Each LoadBalaner service creates a NodePort service. We can find out by the below command. If K8s is running in a cluster which does not support LoadBalancer type service, The Loadbalancer won't be provisioned there and it will continue to treat itself like a NodePort service. <br/>
   $ minikube service <service-name>
 * Run the vote service and it will open in new window and would display the NodePort URL. Give your vote <br/>
+* On cloud providers that support load balancers, an external IP address would be provisioned to access the Service. On minikube, the LoadBalancer type makes the Service accessible through the minikube service command.<br/>
   $ minikube service vote <br/>
   ![image](https://user-images.githubusercontent.com/92582005/201912196-a664a3e1-52ce-4ce7-83a5-d00879324bd9.png) <br/>
 * Access the "result" service and check the results (it will be automatically opened in new browser): <br/>
